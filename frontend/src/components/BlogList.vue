@@ -140,39 +140,39 @@ export default {
       // }, error => {
       //   console.log('获取bloglist出错了.')
       // })
-    this.$http.get('apis/crypto_list_data')
-      .then(response => {
-        // this.blogList = response.data.data
-        // this.loading = false
-        console.log('get apis/crypto_list_data')
-      }, error => {
-        console.log('获取bloglist出错了.')
-      })
-    this.get_realtime_price()
+    // this.$http.get('apis/crypto_list_data')
+    //   .then(response => {
+    //     // this.blogList = response.data.data
+    //     // this.loading = false
+    //     console.log('get apis/crypto_list_data')
+    //   }, error => {
+    //     console.log('获取bloglist出错了.')
+    //   })
+    // this.get_realtime_price()
   },
   methods: {
     deleteRow (index, rows) {
       rows.splice(index, 1)
     },
 
-    get_realtime_price () {
-      this.$http.get('apis/get_realtime_price')
-        .then(response => {
-          this.tempdata=JSON.parse(response.data.crypto_price_data)
-          this.tableData[0].price = this.tempdata["BTC"]
-          this.tableData[1].price = this.tempdata["ETH"]
-          this.tableData[2].price = this.tempdata["BNB"]
-          this.tableData[3].price = this.tempdata["ADA"]
-          this.tableData[4].price = this.tempdata["USDT"]
-          // console.log(this.BTC)
-          console.log(response)
-          console.log(response.data.crypto_price_data)
-          console.log(this.tempdata["BTC"])
-        })
-    },
+    // get_realtime_price () {
+    //   this.$http.get('apis/get_realtime_price')
+    //     .then(response => {
+    //       this.tempdata=JSON.parse(response.data.crypto_price_data)
+    //       this.tableData[0].price = this.tempdata["BTC"]
+    //       this.tableData[1].price = this.tempdata["ETH"]
+    //       this.tableData[2].price = this.tempdata["BNB"]
+    //       this.tableData[3].price = this.tempdata["ADA"]
+    //       this.tableData[4].price = this.tempdata["USDT"]
+    //       // console.log(this.BTC)
+    //       console.log(response)
+    //       console.log(response.data.crypto_price_data)
+    //       console.log(this.tempdata["BTC"])
+    //     })
+    // },
   },
   mounted () {
-    this.timer = setInterval(this.get_realtime_price, 50000)
+    // this.timer = setInterval(this.get_realtime_price, 50000)
   },
   beforeDestroy () {
     clearInterval(this.timer)
