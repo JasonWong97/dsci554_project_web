@@ -84,16 +84,20 @@ export default {
       // fetch('http://api.senticrypt.com/v1/history/bitcoin-2020-02-13_20.json')
       //   .then(response => response.json())
 
-      fetch('/sentiment.json').then((res) => {
-        console.log(res)
-        var data = JSON.parse(res)
-        this.BTC = data.BTC;
-        this.ETH = data.ETH;
-        this.BNB = data.BNB;
-        this.ADA = data.ADA;
-        this.USDT = data.USDT;
-      });
-
+      // fetch('/sentiment.json').then((res) => {
+      //   console.log(res)
+      //   var data = JSON.parse(res)
+      //   this.BTC = data.BTC;
+      //   this.ETH = data.ETH;
+      //   this.BNB = data.BNB;
+      //   this.ADA = data.ADA;
+      //   this.USDT = data.USDT;
+      // });
+        this.BTC = 0.16
+        this.ETH = 0.16
+        this.BNB = 0.16
+        this.ADA = 0.16
+        this.USDT = 0.16
       // this.$http.get('http://api.senticrypt.com/v1/history/bitcoin-2020-02-13_20.json')
       //   .then(response => {
       //     this.BTC = response.data.BTC
@@ -112,10 +116,10 @@ export default {
     // }
   },
   mounted() {
-    // this.timer = setInterval(this.get_sentiment_data, 5000)
-    // this.timer = setInterval(this.myEcharts, 5000)
-    this.myEcharts();
+    this.timer = setInterval(this.get_sentiment_data, 5000)
+    this.timer = setInterval(this.myEcharts, 5000)
     this.get_sentiment_data();
+    this.myEcharts();
   },
 
   beforeDestroy() {
