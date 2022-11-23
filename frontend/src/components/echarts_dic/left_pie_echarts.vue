@@ -1,7 +1,7 @@
 <template>
 
 
-  <div id="left_pie_echarts" v-loading="loading">
+  <div id="left_pie_echarts" >
     <el-card style="min-height: 200px; max-height: 800px; ">
       <div slot="header">
         Sentiment Index
@@ -86,16 +86,26 @@ export default {
       option && myChart.setOption(option)
     },
     get_sentiment_data () {
-      this.$http.get('apis/get_sentiment_data')
-        .then(response => {
-          this.BTC = response.data.BTC
-          this.ETH = response.data.ETH
-          this.BNB = response.data.BNB
-          this.ADA = response.data.ADA
-          this.USDT = response.data.USDT
-          console.log(this.BTC)
-          console.log(response)
+      // fetch('http://api.senticrypt.com/v1/history/bitcoin-2020-02-13_20.json')
+      //   .then(response => response.json())
+
+      this.$d3.json('http://api.senticrypt.com/v1/history/bitcoin-2020-02-13_20.json')
+        .then((data) => {
+          console.log(data)
         })
+
+
+
+      // this.$http.get('http://api.senticrypt.com/v1/history/bitcoin-2020-02-13_20.json')
+      //   .then(response => {
+      //     this.BTC = response.data.BTC
+      //     this.ETH = response.data.ETH
+      //     this.BNB = response.data.BNB
+      //     this.ADA = response.data.ADA
+      //     this.USDT = response.data.USDT
+      //     console.log(this.BTC)
+      //     console.log(response)
+      //   })
     },
 
     // nowTimes() {
@@ -105,9 +115,10 @@ export default {
 
   },
   mounted () {
-    this.timer = setInterval(this.get_sentiment_data, 5000)
-    this.timer = setInterval(this.myEcharts, 5000)
+    // this.timer = setInterval(this.get_sentiment_data, 5000)
+    // this.timer = setInterval(this.myEcharts, 5000)
     this.myEcharts()
+    this.get_sentiment_data()
 
   },
 

@@ -40,14 +40,14 @@
 </template>
 
 <script>
-import Status from '@/components/Status'
+// import Status from '@/components/Status'
 import left_pie_echarts from '@/components/echarts_dic/left_pie_echarts'
 import right_pie_echarts from '@/components/echarts_dic/right_pie_echarts'
 
 export default {
   name: 'Home',
   components: {
-    Status,
+    // Status,
     left_pie_echarts,
     right_pie_echarts
   },
@@ -76,15 +76,15 @@ export default {
     //   }, error => {
     //     console.log('mp3 error')
     //   })
-    fetch('apis/get_info?mp3=yep', {
-      method: 'get',
-    })
-      .then(response => {
-        return response.json()
-      })
-      .then(data => {
-        this.mp3 = data
-      })
+    // fetch('apis/get_info?mp3=yep', {
+    //   method: 'get',
+    // })
+    //   .then(response => {
+    //     return response.json()
+    //   })
+    //   .then(data => {
+    //     this.mp3 = data
+    //   })
   }
 }
 </script>

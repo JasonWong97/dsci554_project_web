@@ -26,7 +26,7 @@
 
     </el-col>
     <el-col :offset="6" :span="18">
-      <div class="MyCrypto" v-loading="loading">
+      <div class="MyCrypto">
         <el-table
           :data="tableData"
           style="width: 100%"
@@ -133,13 +133,13 @@ export default {
     }
   },
   created () {
-    this.$http.get('apis/get_info?blog_list=true&aa=60&kk=6')
-      .then(response => {
-        this.blogList = response.data.data
-        this.loading = false
-      }, error => {
-        console.log('获取bloglist出错了.')
-      })
+    // this.$http.get('apis/get_info?blog_list=true&aa=60&kk=6')
+    //   .then(response => {
+      //   this.blogList = response.data.data
+      //   this.loading = false
+      // }, error => {
+      //   console.log('获取bloglist出错了.')
+      // })
     this.$http.get('apis/crypto_list_data')
       .then(response => {
         // this.blogList = response.data.data

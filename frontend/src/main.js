@@ -8,11 +8,13 @@ import axios from 'axios'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import 'element-ui/lib/theme-chalk/display.css'
-import * as echarts from 'echarts';
+import * as echarts from 'echarts'
 import locale from 'element-ui/lib/locale/lang/en'
+import * as d3 from 'd3'
 
 Vue.use(ElementUI, { locale })
 Vue.prototype.$echarts = echarts
+Vue.prototype.$d3 = d3
 Vue.prototype.$axios = axios
 Vue.config.productionTip = false
 Vue.use(VueResource)

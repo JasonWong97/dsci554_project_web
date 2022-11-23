@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div id="Status" v-loading="loading">
     <el-card style="min-height: 200px; max-height: 500px; ">
       <div slot="header">
@@ -67,4 +67,4 @@
 
 <style scoped>
 
-</style>
+</style> -->
