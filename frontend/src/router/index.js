@@ -5,6 +5,7 @@ import Home from '@/components/Home'
 import AddBlog from '@/components/AddBlog'
 import About from '@/components/About'
 import BlogList from '@/components/BlogList'
+import CryptoOwnerMap from '@/components/CryptoOwnerMap'
 import Face from '@/components/Face'
 import Login from '@/components/User/Login'
 import Register from '@/components/User/Register'
@@ -21,6 +22,7 @@ export default new Router({
     {path: '/candle', name: 'Candle', component: AddBlog},   // 添加blog
     {path: '/about', name: 'About', component: About},   // 关于
     {path: '/bloglist', name: 'BlogList', component: BlogList},  // 显示blog信息
+    {path: '/cryptoOwnerMap', name: 'CryptoOwnerMap', component: CryptoOwnerMap},  // 显示blog信息
     {path: '/face', name: 'Face', component: Face},   // 人脸识别
     {path: '/user/login', name: 'Login', component: Login},   // 登录
     {path: '/user/register', name: 'Register', component: Register},   // 注册

@@ -21,7 +21,7 @@ import { CanvasRenderer } from "echarts/renderers";
 import map_data from "../assets/world.json";
 import cryptoOwner from "../assets/crypto_owners.json";
 export default {
-  name: "BlogList",
+  name: "CryptoOwnerMap",
   data() {
     return {
       map_data: null,

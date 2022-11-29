@@ -43,7 +43,7 @@ export default {
         },
         series: [
           {
-            name: "Positive",
+            name: "Negative",
             type: "pie",
             radius: ["40%", "70%"],
             avoidLabelOverlap: false,
@@ -93,11 +93,11 @@ export default {
       //   this.ADA = data.ADA;
       //   this.USDT = data.USDT;
       // });
-        this.BTC = 0.16
+        this.BTC = 0.292
         this.ETH = 0.16
-        this.BNB = 0.16
-        this.ADA = 0.16
-        this.USDT = 0.16
+        this.BNB = 0.08
+        this.ADA = 0.06
+        this.USDT = 0.12
       // this.$http.get('http://api.senticrypt.com/v1/history/bitcoin-2020-02-13_20.json')
       //   .then(response => {
       //     this.BTC = response.data.BTC
