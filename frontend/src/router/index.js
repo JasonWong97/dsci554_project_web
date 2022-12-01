@@ -13,6 +13,7 @@ import ROOT from '@/components/User/ROOT'
 import left_pie_echarts from '@/components/echarts_dic/left_pie_echarts'
 import right_pie_echarts from '@/components/echarts_dic/right_pie_echarts'
 import Candlestick_Chart from '@/components/echarts_dic/Candlestick_Chart'
+import BarChart from '@/components/BarChart'
 Vue.use(Router)
 
 export default new Router({
@@ -20,6 +21,7 @@ export default new Router({
   routes: [
     {path: '/', name: 'Home', component: Home},  // 主页
     {path: '/candle', name: 'Candle', component: AddBlog},   // 添加blog
+    {path: '/barChart', name: 'BarChart', component: BarChart},   // 添加blog
     {path: '/about', name: 'About', component: About},   // 关于
     {path: '/bloglist', name: 'BlogList', component: BlogList},  // 显示blog信息
     {path: '/cryptoOwnerMap', name: 'CryptoOwnerMap', component: CryptoOwnerMap},  // 显示blog信息

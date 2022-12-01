@@ -3,7 +3,7 @@
     <el-card style="min-height: 200px; max-height: 800px">
       <div slot="header">Crypto Owner Map</div>
       <div>
-        <div id="owner_map" style="width: 1000px; height: 500px"></div>
+        <div id="owner_map" style="width: 400px; height: 300px"></div>
       </div>
     </el-card>
   </div>
@@ -38,8 +38,8 @@ export default {
       // console.log(response)
       // console.log(this.history_data);
       this.myEcharts();
-      console.log(this.map_data);
-      console.log("dsfsd");
+      // console.log(this.map_data);
+      // console.log("dsfsd");
       this.myEcharts();
 
       // })
@@ -54,7 +54,10 @@ export default {
         CanvasRenderer,
       ]);
       var chartDom = document.getElementById("owner_map");
-      var myChart = this.$echarts.init(chartDom);
+      var myChart = this.$echarts.init(chartDom, null, {
+        width: 400,
+        height: 300,
+      });
       var option;
       myChart.hideLoading();
       echarts.registerMap("Owner_Map", map_data, {
@@ -76,12 +79,12 @@ export default {
       });
 
       var option = {
-        title: {
-          text: "Crypto Owner Map (2022)",
-          subtext: "Data from www.census.gov",
-          sublink: "http://www.census.gov/popest/data/datasets.html",
-          left: "right",
-        },
+        // title: {
+        //   text: "Crypto Owner Map (2022)",
+        //   subtext: "Data from www.census.gov",
+        //   sublink: "http://www.census.gov/popest/data/datasets.html",
+        //   left: "right",
+        // },
         tooltip: {
           trigger: "item",
           showDelay: 0,
@@ -107,7 +110,7 @@ export default {
             ],
           },
           text: ["High", "Low"],
-          calculable: true,
+          // calculable: true,
         },
         toolbox: {
           show: true,
@@ -122,7 +125,7 @@ export default {
         },
         series: [
           {
-            name: "USA PopEstimates",
+            name: "Number of Crypto Owners",
             type: "map",
             roam: true,
             map: "Owner_Map",

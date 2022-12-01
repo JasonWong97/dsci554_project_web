@@ -3,7 +3,7 @@
     <el-card style="min-height: 200px; max-height: 800px">
       <div slot="header">Crypto Owner Map</div>
       <div>
-        <div id="owner_map" style="width: 1000px; height: 500px"></div>
+        <div id="owner_map" style="width: 400px; height: 500px"></div>
       </div>
     </el-card>
   </div>
@@ -54,7 +54,10 @@ export default {
         CanvasRenderer,
       ]);
       var chartDom = document.getElementById("owner_map");
-      var myChart = this.$echarts.init(chartDom);
+      var myChart = this.$echarts.init(chartDom, null, {
+        width: 400,
+        height: 400,
+      });
       var option;
       myChart.hideLoading();
       echarts.registerMap("Owner_Map", map_data, {
@@ -76,50 +79,50 @@ export default {
       });
 
       var option = {
-        title: {
-          text: "Crypto Owner Map (2022)",
-          subtext: "Data from www.census.gov",
-          sublink: "http://www.census.gov/popest/data/datasets.html",
-          left: "right",
-        },
+        // title: {
+        //   text: "Crypto Owner Map (2022)",
+        //   subtext: "Data from www.census.gov",
+        //   sublink: "http://www.census.gov/popest/data/datasets.html",
+        //   left: "right",
+        // },
         tooltip: {
           trigger: "item",
           showDelay: 0,
           transitionDuration: 0.2,
         },
-        visualMap: {
-          left: "right",
-          min: 500000,
-          max: 38000000,
-          inRange: {
-            color: [
-              "#313695",
-              "#4575b4",
-              "#74add1",
-              "#abd9e9",
-              "#e0f3f8",
-              "#ffffbf",
-              "#fee090",
-              "#fdae61",
-              "#f46d43",
-              "#d73027",
-              "#a50026",
-            ],
-          },
-          text: ["High", "Low"],
-          calculable: true,
-        },
-        toolbox: {
-          show: true,
-          //orient: 'vertical',
-          left: "left",
-          top: "top",
-          feature: {
-            dataView: { readOnly: false },
-            restore: {},
-            saveAsImage: {},
-          },
-        },
+        // visualMap: {
+        //   left: "right",
+        //   min: 500000,
+        //   max: 38000000,
+        //   inRange: {
+        //     color: [
+        //       "#313695",
+        //       "#4575b4",
+        //       "#74add1",
+        //       "#abd9e9",
+        //       "#e0f3f8",
+        //       "#ffffbf",
+        //       "#fee090",
+        //       "#fdae61",
+        //       "#f46d43",
+        //       "#d73027",
+        //       "#a50026",
+        //     ],
+        //   },
+        //   text: ["High", "Low"],
+        //   calculable: true,
+        // },
+        // toolbox: {
+        //   show: true,
+        //   //orient: 'vertical',
+        //   left: "left",
+        //   top: "top",
+        //   feature: {
+        //     dataView: { readOnly: false },
+        //     restore: {},
+        //     saveAsImage: {},
+        //   },
+        // },
         series: [
           {
             name: "USA PopEstimates",

@@ -1,14 +1,14 @@
 <template>
 
 
-  <div id="right_pie_echarts" v-loading="loading">
+  <div id="right_pie_echarts">
     <el-card style="min-height: 200px; max-height: 800px; ">
       <div slot="header">
         Negative Sentiment
       </div>
 
       <div>
-        <div id="main2" style="width: 600px;height:500px;"></div>
+        <div id="main2" style="width: 300px;height:300px;"></div>
       </div>
     </el-card>
   </div>
@@ -21,7 +21,10 @@ export default {
   methods: {
     myEcharts () {
       var chartDom = document.getElementById('main2');
-      var myChart = this.$echarts.init(chartDom);
+      var myChart = this.$echarts.init(chartDom, null, {
+        width: 300,
+        height: 300,
+      });
       var option;
 
       option = {

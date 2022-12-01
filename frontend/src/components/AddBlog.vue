@@ -95,7 +95,7 @@
       <!--        </div>-->
       <!--        <el-button type="primary" icon="el-icon-search">Search</el-button>-->
       <!--      </el-col>-->
-      <el-col :span="18">
+      <el-col :span="24">
         <Candlestick_Chart></Candlestick_Chart>
       </el-col>
     </el-row>

@@ -7,9 +7,9 @@
           <el-menu :default-active="$route.path" class="el-menu-vertical-demo" mode="horizontal" router>
             <el-menu-item class="hidden-sm-and-down"><img src="./assets/logo.png" style="width: 30px; height: 30px;"></el-menu-item>
             <el-menu-item index="/"><i class="el-icon-house"></i><span class="hidden-sm-and-down">Home</span></el-menu-item>
-            <el-menu-item index="/candle" class="hidden-sm-and-down"><i class="el-icon-data-line"></i><span class="hidden-sm-and-down">Candlestick Chart</span></el-menu-item>
+            <!-- <el-menu-item index="/candle" class="hidden-sm-and-down"><i class="el-icon-data-line"></i><span class="hidden-sm-and-down">Candlestick Chart</span></el-menu-item>
             <el-menu-item index="/bloglist"><i class="el-icon-tickets"></i><span class="hidden-sm-and-down">My Cryptocurrency</span></el-menu-item>
-                        <el-menu-item index="/cryptoOwnerMap"><i class="el-icon-location"></i><span class="hidden-sm-and-down">Crypto Owner Map</span></el-menu-item>
+                        <el-menu-item index="/cryptoOwnerMap"><i class="el-icon-location"></i><span class="hidden-sm-and-down">Crypto Owner Map</span></el-menu-item> -->
 <!--            <el-menu-item index="/face"><i class="el-icon-camera-solid"></i><span class="hidden-sm-and-down">FaceRecogntion</span></el-menu-item>-->
             <!-- <el-submenu index="1">
               <template slot="title"><i class="el-icon-user"></i><span class="hidden-sm-and-down">UserHome</span></template>
