@@ -68,7 +68,7 @@ import left_pie_echarts from "@/components/echarts_dic/left_pie_echarts";
 import right_pie_echarts from "@/components/echarts_dic/right_pie_echarts";
 import BlogList from "@/components/BlogList";
 import AddBlog from "@/components/AddBlog";
-import BarChart from "@/components/barChart";
+import BarChart from "@/components/BarChart";
 
 export default {
   name: "Home",
