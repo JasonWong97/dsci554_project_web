@@ -4,7 +4,7 @@
   <div id="right_pie_echarts">
     <el-card style="min-height: 200px; max-height: 800px; ">
       <div slot="header">
-        Negative Sentiment
+        Sentiment
       </div>
 
       <div>

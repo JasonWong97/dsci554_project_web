@@ -1,8 +1,29 @@
 <template>
   <div id="About">
     <h1>Viz Viz</h1>
-    <h3>Jiacheng Weng</h3>
-    <h3>Email: jweng@usc.edu</h3>
+<ul>
+  <!--
+    - Jiacheng Weng <jweng@usc.edu>
+- Ruifeng Ma <ruifengm@usc.edu>
+- Lei Cao <caolei@usc.edu>
+- Yuke Zhang <yuke@usc.edu>
+ -->
+  <li>
+    Jiacheng Weng  <a href="mailto:jweng@usc.edu">jweng@usc.edu</a>
+  </li>
+  <li>
+    Ruifeng Ma  <a href="mailto:ruifengm@usc.edu">ruifengm@usc.edu</a>
+  </li>
+  <li>
+    Lei Cao  <a href="mailto:caolei@usc.edu">caolei@usc.edu</a>
+  </li>
+  <li>
+    Yuke Zhang  <a href="mailto:yuke@usc.edu>">yuke@usc.edu></a>
+  </li>
+
+
+</ul>
+
   </div>
 </template>
 
